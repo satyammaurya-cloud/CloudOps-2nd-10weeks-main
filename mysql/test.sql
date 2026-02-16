@@ -38,12 +38,6 @@ INSERT INTO `books` (`id`, `title`, `desc`, `price`, `cover`) VALUES
  'https://nix-united.com/wp-content/uploads/2021/12/AWS-Pluses-and-Minuses.png'
 ),
 (3,
- 'GCP Overview',
- 'GCP advantages and disadvantages explained',
- 1899.0,
- 'https://nix-united.com/wp-content/uploads/2021/12/GCP-Pluses-and-Minuses.png'
-),
-(4,
  'MultiCloud Strategy',
  'Choosing the right multicloud strategy',
  2099.0,
@@ -51,7 +45,7 @@ INSERT INTO `books` (`id`, `title`, `desc`, `price`, `cover`) VALUES
 );
 
 -- Reset auto increment
-ALTER TABLE `books` AUTO_INCREMENT = 5;
+ALTER TABLE `books` AUTO_INCREMENT = 4;
 
 COMMIT;
 
