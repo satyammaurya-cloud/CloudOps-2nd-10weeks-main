@@ -25,12 +25,13 @@ sudo systemctl start jenkins
 ```
 # 🐳 Docker and Containers Setup
 ```bash
-sudo yum install docker -y 
-sudo usermod -aG docker ec2-user 
-sudo usermod -aG docker jenkins 
-sudo chmod 666 /var/run/docker.sock 
-systemctl start docker 
-systemctl enable docker 
+sudo yum install docker -y
+sudo systemctl start docker
+sudo systemctl enable docker
+
+sudo usermod -aG docker ec2-user    # Add users to docker group
+sudo usermod -aG docker jenkins
+newgrp docker                       # Apply group changes (important)
 ```
 - SonarQube → Runs code quality analysis service accessible on port 9000  
 - Tomcat → Runs Java web applications (WAR files) accessible on port 8089  
