@@ -15,14 +15,15 @@ sudo yum install git -y
 #### 🤖 Jenkins
 ```bash
 # Java (Required for Jenkins)
-sudo yum install java-17-amazon-corretto.x86_64 -y
+sudo yum install fontconfig java-21-openjdk -y
 
-sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/rpm-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/rpm-stable/jenkins.io-2026.key
 sudo yum install jenkins -y
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
 ```
+
 # 🐳 Docker and Containers Setup
 ```bash
 sudo yum install docker -y
