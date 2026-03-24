@@ -32,6 +32,7 @@ sudo systemctl enable docker
 sudo usermod -aG docker ec2-user    # Add users to docker group
 sudo usermod -aG docker jenkins
 newgrp docker                       # Apply group changes (important)
+sudo systemctl restart jenkins      # Jenkins service will not pick the new group permission until you ran this command
 ```
 - SonarQube → Runs code quality analysis service accessible on port 9000  
 - Tomcat → Runs Java web applications (WAR files) accessible on port 8089  
