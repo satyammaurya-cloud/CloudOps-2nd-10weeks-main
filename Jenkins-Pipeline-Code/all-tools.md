@@ -28,10 +28,12 @@ sudo systemctl start jenkins
 sudo yum install docker -y
 sudo systemctl start docker
 sudo systemctl enable docker
-
 sudo usermod -aG docker ec2-user    # Add users to docker group
 sudo usermod -aG docker jenkins
 newgrp docker                       # Apply group changes (important)
+
+sudo chmod 666 /var/run/docker.sock # Jenkins can run now Docker without restart, but it’s insecure as all users get access.
+    #-------OR--------
 sudo systemctl restart jenkins      # Jenkins service will not pick the new group permission until you ran this command
 ```
 - SonarQube → Runs code quality analysis service accessible on port 9000  
